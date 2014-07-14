@@ -15,7 +15,11 @@ ZSH_THEME="robbyrussell"
 
 alias nuke='rm -rf'
 alias lss='ls | xargs say'
-
+alias gpm='git push origin master'
+alias py='python'
+alias vimrc='vi ~/.vimrc'
+alias zshrc='vi ~/.zshrc'
+alias ,='cd ..'
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
