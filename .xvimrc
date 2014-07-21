@@ -1,0 +1,37 @@
+        nmap <C-Right> $
+        imap <C-Right> <Esc>$i<Right>
+
+        nmap <C-Left> 0
+        imap <C-Left> <Esc>0i<Left>
+
+        nmap <C-Down> G
+        imap <C-Down> <Esc>Gi<Down>
+
+        nmap <C-Up> gg
+        imap <C-Up> <Esc>ggi<Up>
+
+        nmap <S-Up> 5k
+        imap <S-Up> <Esc>5ki
+
+        nmap <S-Down> 5j
+        imap <S-Down> <Esc>5ji
+
+        nmap <S-Left> 5h
+        imap <S-Left> <Esc>5hi
+
+        nmap <S-Right> 5l
+        imap <S-Right> <Esc>5li
+map ,c :xccmd complete<CR>
+map ,s viw:xccmd findSelectedTextInWorkspace<CR>
+map ,h :xhelp<CR>
+
+map ,in :xccmd showInFinder<CR>
+
+map ,w :w<CR>
+
+map ,r  :run<CR>
+map ,cl :xcmenucmd clean<CR>
+
+set incsearch
+set ignorecase
+set smartcase
