@@ -1,6 +1,5 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
-
 EDITOR=vim;
 
 # Set name of the theme to load.
@@ -16,10 +15,13 @@ ZSH_THEME="robbyrussell"
 alias nuke='rm -rf'
 alias lss='ls | xargs say'
 alias gpm='git push origin master'
+alias gfd='git diff'
 alias py='python'
 alias vimrc='vi ~/.vimrc'
 alias zshrc='vi ~/.zshrc'
 alias ,='cd ..'
+alias gbrd='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
+
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 

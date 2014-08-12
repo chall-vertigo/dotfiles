@@ -1,36 +1,53 @@
-        nmap <C-Right> $
-        imap <C-Right> <Esc>$i<Right>
 
-        nmap <C-Left> 0
-        imap <C-Left> <Esc>0i<Left>
+" Navigation
+nmap <C-Right> $
+imap <C-Right> <Esc>$i<Right>
 
-        nmap <C-Down> G
-        imap <C-Down> <Esc>Gi<Down>
+nmap <C-Left> 0
+imap <C-Left> <Esc>0i<Left>
 
-        nmap <C-Up> gg
-        imap <C-Up> <Esc>ggi<Up>
+nmap <C-Down> G
+imap <C-Down> <Esc>Gi<Down>
 
-        nmap <S-Up> 5k
-        imap <S-Up> <Esc>5ki
+nmap <C-Up> gg
+imap <C-Up> <Esc>ggi<Up>
 
-        nmap <S-Down> 5j
-        imap <S-Down> <Esc>5ji
+nmap <S-Up> 5k
+imap <S-Up> <Esc>5ki
 
-        nmap <S-Left> 5h
-        imap <S-Left> <Esc>5hi
+nmap <S-Down> 5j
+imap <S-Down> <Esc>5ji
 
-        nmap <S-Right> 5l
-        imap <S-Right> <Esc>5li
-map ,c :xccmd complete<CR>
+nmap <S-Left> 5h
+imap <S-Left> <Esc>5hi
+
+nmap <S-Right> 5l
+imap <S-Right> <Esc>5li
+""""
+
+" search for hovered text
 map ,s viw:xccmd findSelectedTextInWorkspace<CR>
+
+" Open hovered text's documentation
 map ,h :xhelp<CR>
 
+" Open current file in finder
 map ,in :xccmd showInFinder<CR>
 
+" <leader>w to save current file
 map ,w :w<CR>
 
+" <leader>w to run project
 map ,r  :run<CR>
+
+" <leader>cl to clean project
 map ,cl :xcmenucmd clean<CR>
+
+" toggle navigator, debug area, utilities
+map ,<Down> :xccmd toggleDebuggerVisibility<CR>
+map ,<Left> :xccmd toggleNabigatorsVisibility<CR>
+map ,<Right> :xccmd toggleUtilitiesVisibility<CR>
+
 
 set incsearch
 set ignorecase
