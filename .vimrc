@@ -7,11 +7,9 @@ execute pathogen#infect()
 	let mapleader = ","
 	set encoding=utf-8
 
-        " }
 " Syntastic {
     let g:syntastic_check_on_open=1
     let g:syntastic_enable_signs=1
-" }
 
 " General {
 	set number                  " turn on line numbers
@@ -39,6 +37,16 @@ execute pathogen#infect()
         set noerrorbells
         set novisualbell
 
+        " Stop certain movements from always going to the first character of a line
+        set nostartofline
+
+        " Set the command window height to 2 lines, to avoid many cases of
+        " having to "press <Enter> to continue" "
+        set cmdheight=2
+
+        set background=dark
+        color solarized
+
         " auto reload vimrc when editing it
         autocmd! bufwritepost .vimrc source ~/.vimrc
 " }
@@ -51,8 +59,6 @@ execute pathogen#infect()
 
 	Plugin 'airblade/vim-gitgutter' 	" git diff marks in gutter
 
-	Plugin 'godlygeek/tabular'		" Markdown
-	Plugin 'plasticboy/vim-markdown'	" Markdown
 
 	Plugin 'scrooloose/nerdtree'		" NerdTree
 	nnoremap <leader>nt :NERDTree<CR>
@@ -60,9 +66,15 @@ execute pathogen#infect()
         Bundle 'bling/vim-airline'
         let g:airline_powerline_fonts = 1
         let g:airline_theme='powerlineish'
+        let g:airline#extensions#tabline#enabled = 1
         set laststatus=2
 
 	Bundle 'Lokaltog/vim-easymotion'
+        
+        Bundle 'tomasr/molokai'
+        Bundle 'tpope/vim-vividchalk'
+        Bundle 'altercation/vim-colors-solarized'
+
 
         call vundle#end()            " required
 	filetype plugin indent on    " required

@@ -16,11 +16,12 @@ alias nuke='rm -rf'
 alias lss='ls | xargs say'
 alias gpm='git push origin master'
 alias gfd='git diff'
-alias py='python'
+alias py='python3'
 alias vimrc='vi ~/.vimrc'
 alias zshrc='vi ~/.zshrc'
 alias ,='cd ..'
 alias gbrd='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
+alias open="xdg-open"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
