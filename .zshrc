@@ -22,7 +22,7 @@ alias zshrc='vi ~/.zshrc'
 alias ,='cd ..'
 alias gbrd='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 alias open="xdg-open"
-
+alias fuck="sudo $(fc -nl -1)"
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
